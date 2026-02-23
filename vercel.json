@@ -7,6 +7,10 @@
     },
     "rewrites": [
         {
+            "source": "/",
+            "destination": "/api/index.js"
+        },
+        {
             "source": "/api/trips",
             "destination": "/api/trips.js"
         }
