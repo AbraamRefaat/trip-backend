@@ -8,9 +8,17 @@ let dbConnection;
 
 async function connectToDatabase() {
     if (dbConnection) return dbConnection;
-    await client.connect();
-    dbConnection = client.db("nile_quest");
-    return dbConnection;
+    try {
+        console.log("🚀 [TripsBackend] Connecting to MongoDB Cluster...");
+        await client.connect();
+        console.log("✅ [TripsBackend] MongoDB Connection Successful!");
+        dbConnection = client.db("nile_quest");
+        return dbConnection;
+    } catch (error) {
+        console.error("❌ [TripsBackend] MongoDB Connection Failed:");
+        console.error(error);
+        throw error;
+    }
 }
 
 module.exports = async (req, res) => {
