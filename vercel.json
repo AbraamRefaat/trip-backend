@@ -1,0 +1,14 @@
+{
+    "functions": {
+        "api/*.js": {
+            "maxDuration": 60,
+            "memory": 1024
+        }
+    },
+    "rewrites": [
+        {
+            "source": "/api/trips",
+            "destination": "/api/trips.js"
+        }
+    ]
+}

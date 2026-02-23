@@ -1,0 +1,12 @@
+{
+    "name": "nile-quest-trips-backend",
+    "version": "1.0.0",
+    "description": "NileQuest Trip Persistence API",
+    "main": "api/trips.js",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "mongodb": "^6.3.0"
+    }
+}
